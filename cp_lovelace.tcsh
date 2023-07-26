@@ -21,44 +21,44 @@ echo A ser copiado: $name
 set DIR = "~/homelovelace/Troca" # caminho na lovelace (Atenção: Não ponha '/' no final do caminho)
 
 if ( $type == 'file' ) then
- goto copy_file
+  goto copy_file
 else if ( $type == 'dir' ) then
- goto copy_directory
+  goto copy_directory
 else if
- echo O parâmetro 'Type' deve ser 'file' ou 'dir'.
- exit
+  echo O parâmetro 'Type' deve ser 'file' ou 'dir'.
+  exit
 endif
 
 copy_file:
 
 if ( $job == 'send' ) then
- echo Copiando arquivo para a lovelace...
- echo Caminho na lovelace: $DIR
- scp -P 31459 $name $user_name'@cenapad.unicamp.br:'$DIR
- exit
+  echo Copiando arquivo para a lovelace...
+  echo Caminho na lovelace: $DIR
+  scp -P 31459 $name $user_name'@cenapad.unicamp.br:'$DIR
+  exit
 else if ( $job == 'get' ) then 
- echo Copiando arquivo da lovelace...
- echo Caminho na lovelace: $DIR
- scp -P 31459 $user_name'@cenapad.unicamp.br:'$DIR/$name .
- exit
+  echo Copiando arquivo da lovelace...
+  echo Caminho na lovelace: $DIR
+  scp -P 31459 $user_name'@cenapad.unicamp.br:'$DIR/$name .
+  exit
 else 
- echo O parâmetro 'Job' deve ser 'send' or 'get'.
+  echo O parâmetro 'Job' deve ser 'send' or 'get'.
 endif
 
 copy_directory:
 
 if ( $job == 'send' ) then
- echo Copiando arquivo para a lovelace...
- echo Caminho na lovelace: $DIR
- scp -rP 31459 $name $user_name'@cenapad.unicamp.br:'$DIR
- exit
+  echo Copiando arquivo para a lovelace...
+  echo Caminho na lovelace: $DIR
+  scp -rP 31459 $name $user_name'@cenapad.unicamp.br:'$DIR
+  exit
 else if ( $job == 'get' ) then 
- echo Copiando arquivo da lovelace...
- echo Caminho na lovelace: $DIR
- scp -rP 31459 $user_name'@cenapad.unicamp.br:'$DIR/$name .
- exit
+  echo Copiando arquivo da lovelace...
+  echo Caminho na lovelace: $DIR
+  scp -rP 31459 $user_name'@cenapad.unicamp.br:'$DIR/$name .
+  exit
 else
- echo O parâmetro 'Job' deve ser 'send' or 'get'.
- exit
+  echo O parâmetro 'Job' deve ser 'send' or 'get'.
+  exit
 endif
 
