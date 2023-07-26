@@ -43,6 +43,7 @@ else if ( $job == 'get' ) then
   exit
 else 
   echo O parâmetro 'Job' deve ser 'send' or 'get'.
+  exit
 endif
 
 copy_directory:
