@@ -49,12 +49,12 @@ endif
 copy_directory:
 
 if ( $job == 'send' ) then
-  echo Copiando arquivo para a lovelace...
+  echo Copiando diretório para a lovelace...
   echo Caminho na lovelace: $DIR
   scp -rP 31459 $name $user_name'@cenapad.unicamp.br:'$DIR
   exit
 else if ( $job == 'get' ) then 
-  echo Copiando arquivo da lovelace...
+  echo Copiando diretório da lovelace...
   echo Caminho na lovelace: $DIR
   scp -rP 31459 $user_name'@cenapad.unicamp.br:'$DIR/$name .
   exit
