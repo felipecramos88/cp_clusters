@@ -9,7 +9,7 @@ Antes de usar é preciso também trocar o nome do usuário dentro do script (dev
 
 Para simplicar ainda mais a utilização do script é possível incluir no ".bashrc":
 
-```
+```tcsh
 alias send="cp_lovelace.tcsh send"
 alias get="cp_lovelace.tcsh get"
 ```
