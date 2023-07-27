@@ -1,5 +1,5 @@
 # cp_lovelace
-Shell script para transferência de dados entre o servidor e a máquina local.
+## Shell script para transferência de dados entre o servidor e a máquina local.
 
 Esse script pode ser usado para transferência de arquivos para e a partir do ambiente lovelace (CENAPAD). É preciso ter na home da lovelace um diretório chamado "Troca". 
 
