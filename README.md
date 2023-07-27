@@ -9,26 +9,26 @@ Antes de usar é preciso também trocar o nome do usuário dentro do script (dev
 
 Para simplicar ainda mais a utilização do script é possível incluir no ".bashrc":
 
-```tcsh
+``` bash
 alias send="cp_lovelace.tcsh send"
 alias get="cp_lovelace.tcsh get"
 ```
 
 Assim, para enviar um arquivo para a lovelace é só fazer:
 
-```
+``` bash
 send file <nome_do_arquivo>
 ```
 
 Ou se for um diretório:
 
-```
+``` bash
 send dir <nome_do_diretório>
 ```
 
 E para baixar basta fazer:
 
-```
+``` bash
 get file <nome_do_arquivo>
 get dir <nome_do_diretório>
 ```
